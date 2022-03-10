@@ -9,7 +9,7 @@ const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     init();
-  });
+  }, []);
 
   const init = async () => {
     await dispatch(fetchMovieList());

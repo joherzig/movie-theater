@@ -1,7 +1,6 @@
 import { createStore, applyMiddleware, compose } from "redux";
 import rootReducer from "./reducers";
 import _ from "lodash";
-import { persistState } from "redux-devtools";
 import promiseMiddleware from "redux-promise-middleware";
 import thunk from "redux-thunk";
 
