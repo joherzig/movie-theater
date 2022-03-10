@@ -9,7 +9,6 @@ const MovieDetail = ({ match }) => {
   }));
   const { details } = useMappedState(mapState);
 
-  console.log({ details });
   const year = new Date(details.released_on).getFullYear();
   return (
     <div className="MovieDetail">
