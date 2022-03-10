@@ -1,15 +1,11 @@
 import React, { useState } from "react";
-import { useDispatch } from "redux-react-hook";
 import qs from "query-string";
 import _ from "lodash";
 import "./Appbar.css";
-import { fetchMovieList } from "../../../store/reducers/movies";
 
 const Appbar = ({ location, history, ...props }) => {
   const query = qs.parse(location.search) || {};
   const [search, setSearch] = useState(query.search || "");
-
-  const dispatch = useDispatch();
 
   const handleInputChange = ({ target: { value } }) => {
     setSearch(value);
@@ -17,7 +13,6 @@ const Appbar = ({ location, history, ...props }) => {
   };
 
   const updateMovieList = _.debounce((search) => {
-    dispatch(fetchMovieList(search));
     if (!location.pathname.match(/^\/movies$/)) {
       history.push(`/movies?${qs.stringify({ search })}`);
       return null;
