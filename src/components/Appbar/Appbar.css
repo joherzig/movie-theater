@@ -1,0 +1,10 @@
+.Appbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 2px solid grey;
+}
+
+.Appbar-title {
+  text-transform: uppercase;
+}
