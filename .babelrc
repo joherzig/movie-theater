@@ -1,0 +1,17 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": ["IE 10", "safari >= 7"]
+        },
+        "debug": false,
+        "modules": false,
+        "forceAllTransforms": true
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": [["@babel/plugin-transform-runtime", { "regenerator": true }]]
+}
