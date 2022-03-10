@@ -1,0 +1,13 @@
+.MovieDetail-wrapper {
+  padding: 16px;
+  display: flex;
+}
+
+.MovieDetail-info-wrapper {
+  margin-left: 16px;
+}
+
+.MovieDetail-info-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+}

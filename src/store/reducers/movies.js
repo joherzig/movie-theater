@@ -40,7 +40,7 @@ const reducer = (state = initState, action) =>
 
 export const movieSelectors = {
   list: (state) => state.movies.list,
-  movie: (id, state) => state.movies.byId[id],
+  movie: (state, id) => state.movies.byId[id],
   byGenre: (state) => state.movies.byGenre,
 };
 
