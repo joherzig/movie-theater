@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import { useMappedState } from "redux-react-hook";
 import { movieSelectors } from "../../store/reducers/movies";
-import Appbar from "../Appbar";
+import Appbar from "../WookieRoute/Appbar";
 import "./MovieDetail.css";
 
 const MovieDetail = ({ match }) => {
