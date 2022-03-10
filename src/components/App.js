@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "redux-react-hook";
+import qs from "query-string";
 import AppRouter from "../router/AppRouter";
 import { fetchMovieList } from "../store/reducers/movies";
 import "./App.css";
@@ -12,7 +13,8 @@ const App = () => {
   }, []);
 
   const init = async () => {
-    await dispatch(fetchMovieList());
+    const query = qs.parse(window.location.search) || {};
+    await dispatch(fetchMovieList(query.search || ""));
     setLoaded(true);
   };
 

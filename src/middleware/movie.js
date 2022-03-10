@@ -17,10 +17,12 @@ const request = {
 };
 
 const movieApi = {
-  getList: () =>
-    request.get("https://wookie.codesubmit.io/movies").then((res) => {
+  getList: (search) => {
+    const searchQuery = search ? `?q=${search}` : "";
+    return request.get(`https://wookie.codesubmit.io/movies${searchQuery}`).then((res) => {
       return res?.movies || [];
-    }),
+    });
+  },
 };
 
 export default movieApi;

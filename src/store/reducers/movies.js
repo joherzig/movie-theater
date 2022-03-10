@@ -6,9 +6,9 @@ const MODULE = "MOVIES";
 
 const GET_LIST = `${MODULE}/GET_LIST`;
 
-export const fetchMovieList = () => ({
+export const fetchMovieList = (search) => ({
   type: GET_LIST,
-  payload: movieApi.getList(),
+  payload: movieApi.getList(search),
 });
 
 const initState = {

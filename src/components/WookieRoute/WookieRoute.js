@@ -5,12 +5,14 @@ import Appbar from "./Appbar";
 const WookieRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
-    render={(matchProps) => (
-      <div className="WookieRoute">
-        <Appbar />
-        <Component {...matchProps} />
-      </div>
-    )}
+    render={(matchProps) => {
+      return (
+        <div className="WookieRoute">
+          <Appbar {...matchProps} />
+          <Component {...matchProps} />
+        </div>
+      );
+    }}
   />
 );
 
