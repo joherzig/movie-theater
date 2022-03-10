@@ -24,8 +24,6 @@ const reducer = (state = initState, action) =>
         draft.list = payload;
         draft.byId = _.keyBy(payload, "id");
         break;
-      default:
-        return null;
     }
   });
 
