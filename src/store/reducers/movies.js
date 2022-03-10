@@ -14,6 +14,7 @@ export const fetchMovieList = () => ({
 const initState = {
   list: [],
   byId: {},
+  byGenre: {},
 };
 
 const reducer = (state = initState, action) =>
@@ -23,6 +24,16 @@ const reducer = (state = initState, action) =>
       case `${GET_LIST}_FULFILLED`:
         draft.list = payload;
         draft.byId = _.keyBy(payload, "id");
+        draft.byGenre = payload.reduce((byGenre, movie) => {
+          movie.genres.forEach((el) => {
+            if (!byGenre[el]?.length) {
+              byGenre[el] = [movie];
+              return null;
+            }
+            byGenre[el].push(movie);
+          });
+          return byGenre;
+        }, {});
         break;
     }
   });
