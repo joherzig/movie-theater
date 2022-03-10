@@ -1,7 +1,6 @@
 import React, { useCallback } from "react";
 import { useMappedState } from "redux-react-hook";
 import { movieSelectors } from "../../store/reducers/movies";
-import Appbar from "../WookieRoute/Appbar";
 import "./MovieDetail.css";
 
 const MovieDetail = ({ match }) => {
@@ -14,7 +13,6 @@ const MovieDetail = ({ match }) => {
   const year = new Date(details.released_on).getFullYear();
   return (
     <div className="MovieDetail">
-      <Appbar />
       <div className="MovieDetail-wrapper">
         <div className="MoveDetail-poster-wrapper">
           <img className="MovieDetail-poster" src={details.poster} />
