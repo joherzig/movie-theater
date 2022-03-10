@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "redux-react-hook";
 import AppRouter from "../router/AppRouter";
 import { fetchMovieList } from "../store/reducers/movies";
