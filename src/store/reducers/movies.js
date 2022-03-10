@@ -1,5 +1,6 @@
 import produce from "immer";
 import _ from "lodash";
+import movieApi from "../../middleware/movie";
 
 const MODULE = "MOVIES";
 
@@ -7,7 +8,7 @@ const GET_LIST = `${MODULE}/GET_LIST`;
 
 export const fetchMovieList = () => ({
   type: GET_LIST,
-  payload: [],
+  payload: movieApi.getList(),
 });
 
 const initState = {
