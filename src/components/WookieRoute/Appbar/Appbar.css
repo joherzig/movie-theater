@@ -7,4 +7,5 @@
 
 .Appbar-title {
   text-transform: uppercase;
+  cursor: pointer;
 }

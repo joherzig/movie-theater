@@ -1,10 +1,10 @@
 import React from "react";
 import "./Appbar.css";
 
-const Appbar = ({ search, onChange }) => {
+const Appbar = ({ search, onChange, ...props }) => {
   return (
     <div className="Appbar">
-      <div className="Appbar-title">
+      <div className="Appbar-title" onClick={() => (window.location = "/")}>
         <span>
           Wookie
           <br />
