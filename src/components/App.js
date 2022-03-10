@@ -17,11 +17,7 @@ const App = () => {
     await dispatch(fetchMovieList(query.search || ""));
     setLoaded(true);
   };
-  return (
-    <div className="App">
-      <AppRouter />
-    </div>
-  );
+  return <div className="App">{loaded ? <AppRouter /> : <span>Loading...</span>}</div>;
 };
 
 export default App;
