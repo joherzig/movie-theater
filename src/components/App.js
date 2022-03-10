@@ -13,8 +13,7 @@ const App = () => {
   }, []);
 
   const init = async () => {
-    const query = qs.parse(window.location.search) || {};
-    await dispatch(fetchMovieList(query.search || ""));
+    await dispatch(fetchMovieList());
     setLoaded(true);
   };
   return <div className="App">{loaded ? <AppRouter /> : <span>Loading...</span>}</div>;
