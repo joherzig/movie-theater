@@ -1,0 +1,43 @@
+.Genre {
+}
+
+.Genre-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -6px;
+}
+
+.Genre-movie {
+  position: relative;
+  margin: 6px;
+  width: 250px;
+}
+
+.Genre-backdrop {
+  display: block;
+  width: 100%;
+}
+
+.Genre-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(100, 100, 100, 0.7);
+}
+
+.Genre-movie:hover .Genre-overlay {
+  opacity: 1;
+}
+
+.Genre-movie-title {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
