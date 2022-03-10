@@ -27,7 +27,7 @@ const Appbar = ({ location, history, ...props }) => {
 
   return (
     <div className="Appbar">
-      <div className="Appbar-title" onClick={() => (window.location = "/")}>
+      <div className="Appbar-title" onClick={() => history.push("/")}>
         <span>
           Wookie
           <br />
